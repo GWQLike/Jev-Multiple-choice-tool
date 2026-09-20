@@ -1,0 +1,12 @@
+config.json
+.env
+.env.*
+logs/
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+.models/
+.diagnostics/
+.uv-cache/

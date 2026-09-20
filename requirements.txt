@@ -1,0 +1,7 @@
+mss==10.2.0
+pynput==1.8.2
+rapidocr==3.9.2
+onnxruntime==1.30.0
+httpx==0.28.1
+numpy==2.5.3
+Pillow==12.3.0

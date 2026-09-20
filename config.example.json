@@ -1,0 +1,12 @@
+{
+  "hotkey": "<alt>+q",
+  "exit_hotkey": "<alt>+<shift>+q",
+  "capture_mode": "fixed",
+  "capture_region": {"left": 300, "top": 200, "width": 1200, "height": 700},
+  "popup_duration_ms": 1500,
+  "confidence_warning_threshold": 0.8,
+  "jev_timeout_seconds": 5,
+  "jev_model": "jev-latest",
+  "typesafe_api_key": "",
+  "debug": false
+}
