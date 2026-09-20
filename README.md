@@ -175,23 +175,6 @@ if ([string]::IsNullOrWhiteSpace($env:AI_GATEWAY_API_KEY)) { "Key missing" } els
 
 请先自行将诊断图片放到 `.diagnostics/`。该命令会在终端输出识别文字；它显示的 OCR 耗时包含本次引擎初始化，不能直接当作常驻程序的预热后耗时。
 
-## 隐私与上传前检查
-
-截图和 OCR 在本地处理；解析后的**题干和选项文本会发送给 Vercel AI Gateway，并由 Jev 服务处理**。正常链路不保存截图，不记录题目正文或 API Key；显式 OCR 诊断会输出题目文字。
-
-`.gitignore` 已排除 `config.json`、`.env`、`.env.*`、`logs/`、`.venv/`、`.models/`、`.diagnostics/` 和常见缓存。请把诊断截图放在 `.diagnostics/`，避免在项目根目录存放包含隐私的图片。
-
-上传前检查文件清单：
-
-```powershell
-git status --short
-git ls-files
-git diff --cached --name-only
-git check-ignore config.json .env logs/app.log .models/example.onnx .venv/pyvenv.cfg
-```
-
-确认提交中没有凭据、日志或私人截图，并检查 Git 历史。忽略规则不会自动取消已经跟踪的文件，也不能替代内容扫描。分享日志或截图前请检查其中的敏感信息。
-
 ## 项目结构
 
 ```text
